@@ -1,0 +1,29 @@
+<p>signup works!</p>
+
+<div>
+    <h2>Registration</h2>
+    <div class="row"  *ngIf="showMsg">
+        <div class="col-xs-12">
+          <p class="alert alert-success">
+              <strong>Registration Success!</strong> Please click here to login!.
+          </p>
+        </div>
+      </div>
+        <form [formGroup]="articleForm" (ngSubmit)="onSubmit()" >
+            <div class="input-group mb-3 w-25">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" formControlName="name">
+            </div> 
+            <div class="input-group mb-3 w-25">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" formControlName="email">
+            </div>
+            <div class="input-group mb-3 w-25">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" formControlName="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+   
+</div>
